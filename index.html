@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./js/sketchpad.js"></script>
+</head>
+<body>
+<div class="container">
+    
+    <div class="header">
+   
+	  <div class="row">
+	     <div class="col-2">
+			  <div class="color-bar">
+				<input type="button" class="button" onclick="setColor(this)">
+				<input type="button" class="button button2" onclick="setColor(this)">
+				<input type="button" class="button button3" onclick="setColor(this)">
+				<input type="button" class="button button4" onclick="setColor(this)">
+				<input type="button" class="button button5" onclick="setColor(this)">
+				<input type="button" class="button button6" onclick="setColor(this)">
+				<input type="button" class="button button7" onclick="setColor(this)">
+				<input type="button" class="button button8" onclick="setColor(this)">
+				<input type="button" class="button button9" onclick="setColor(this)">
+				<input type="button" class="button button10" onclick="setColor(this)">
+				<input type="button" class="button button11" onclick="setColor(this)">
+				<input type="button" class="button button12" onclick="setColor(this)">
+			</div>
+		 </div>
+		 <div class="col-2">
+			  <div class="size">
+				<input type="button" class="button" value ="Brush-S" onclick="setSize(1.0);">
+				<input type="button" class="button" value ="Brush-M" onclick="setSize(6.0)">
+				<input type="button" class="button" value ="Brush-L" onclick="setSize(9.0)">
+				<input type="button" class="button" value ="Brush-XL" onclick="setSize(13.0)">
+			  </div>
+		 </div>
+		 <div class="col-3">
+		     <div class="marker-type">
+				<input type="button" class="button" value ="Crayon" onclick="ctx.globalAlpha = '0.4'; currentShape = 'scribble'; ctx.shadowBlur='0'; ctx.strokeStyle = currentColor">
+				<input type="button" class="button" value ="Marker" onclick="ctx.lineWidth = '22';  currentShape = 'scribble'; ctx.globalAlpha = '1.0';ctx.shadowBlur='0'; ctx.strokeStyle = currentColor;">
+				<input type="button" class="button" value ="Eraser" onclick="eraser()">
+				<input type="button" class="button" value ="Brush-Shadow" onclick="ctx.lineWidth = '9'; currentShape = 'scribble'; ctx.globalAlpha = '1.0';ctx.shadowBlur='10';ctx.shadowColor=currentColor; ctx.strokeStyle = currentColor;">
+			</div>
+		 </div>
+		 <div class="col-4">
+		     <div class="shape">
+       
+				<!-- <span id="spid" class="classic">Click here to draw the circles</span></a> -->
+				<input type="button" onclick="setShapeType('circle')" id = "shapesC" class="buttonSize" value ="Circles">
+				<input type="button" onclick="setShapeType('square')" id = "shapesC" class="buttonSize" value ="Sqaures">
+				<input type="button" onclick="setShapeType('rectangle')" id = "shapesC" class="buttonSize" value ="Rectangles">
+				<input type="button" onclick="setShapeType('line')" id = "shapesC" class="buttonSize" value ="Lines">
+				<input type="button" onclick="setShapeType('ellipse')" id = "shapesC" class="buttonSize" value ="Ellipses">
+				<input type="button" onclick="setShapeType('polygon', 3)" id = "shapesC" class="buttonSize" value ="Triangle">
+				<input type="button" onclick="setShapeType('polygon', 4)" id = "shapesC" class="buttonSize" value ="Diamond">
+				<input type="button" onclick="setShapeType('polygon', 5)" id = "shapesC" class="buttonSize" value ="Pentagons">
+				<input type="button" onclick="setShapeType('polygon', 6)" id = "shapesC" class="buttonSize" value ="Hexagons">
+				  
+			</div>
+			
+		 </div>
+            <div class="col-1">
+			   <button  href="javascript:;" class="btn btn-primary m-1" id="clear">Clear</button>
+			   <button class="btn btn-primary  move m-1"  onclick="togglebtn(event)" id = "btnMve"> Move</button>
+			</div>
+
+	</div>
+</div>
+<div class="section">
+      <h1 class="title text-center">Sketch Pad</h1>
+	  <canvas id="myCanvas" width="800" height="500">
+        Canvas not Supported
+      </canvas>
+</div>	
+</body>
+</html>

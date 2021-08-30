@@ -1,0 +1,144 @@
+body {
+	background: #fff;
+	margin:0;
+	padding:0;
+}
+
+#ctxmenu {
+  position: fixed;
+  background:#E0E0E0;
+  color: black;
+  cursor: pointer;
+  border: 1px black solid
+}
+
+#ctxmenu > p {
+  padding: 0 1rem;
+  margin: 0
+}
+
+#ctxmenu > p:hover {
+  background: black;
+  color: ghostwhite
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.header{
+    background-color: #E0E0E0;
+    text-align: center;
+}
+
+.title {
+    width: auto;
+    line-height: 0 px;
+    font-size: 30px;
+    font-weight: bold;
+    color:black;
+    text-shadow: 0px -1px #000;
+    padding:0 30px;
+}
+.button.active{
+	    border: 2px solid green;
+}
+.size .button{
+	min-width: 75px;
+	margin: 2px 0px;
+}
+.marker-type .button{
+	min-width: 120px;
+	margin: 2px 0px;
+}
+.shape .buttonSize{
+	min-width:100px;
+	margin: 2px 0px;
+}
+.shape .buttonSize.selected{
+	border-color: green; 
+}
+.color-bar{
+	margin-top:10px;
+	
+}
+.color-bar .button{
+	width:20px; height:20px; border:1px solid #000;
+}
+.draw.active{
+	background: green;
+}
+.disabled.buttonSize{
+	pointer-events:none;
+	opacity:0.5;
+	cursor:default;
+}
+.button2 {background-color:blue} 
+.button3 {background-color: #f44336;}
+.button4 {background-color:grey} 
+.button5 {background-color:brown;} 
+.button6 {background-color:orange;} 
+.button7 {background-color:purple;} 
+.button9 {background-color:yellow;}
+.button8 {background-color:Black;} 
+.button9 {background-color:navy} 
+.button10 {background-color:rosybrown;} 
+.button11 {background-color:lavender;} 
+.button12 {background-color:#FFC0CB;} 
+
+#myCanvas {
+    border: 2px solid #ccc; cursor:crosshair;
+     background: white; border-radius: 10px;       margin: 0 auto;
+    display: block; }
+#wrapper {width: 850px; margin: 0 auto;text-align: center;}
+#buttons { border: 5px solid yellow; width: 50px;}
